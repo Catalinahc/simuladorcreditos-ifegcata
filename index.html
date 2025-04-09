@@ -6,12 +6,18 @@
   <title>Simulador de Crédito</title>
   <script defer src="app.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
-<body class="bg-blue-900 min-h-screen p-6">
+<body class="min-h-screen p-6">
 
   <!-- Contenido principal -->
-  <div class="max-w-3xl mx-auto bg-white shadow p-6 rounded mt-8">
-    <h1 class="text-2xl font-bold mb-4 text-gray-700">SIMULADOR DE CRÉDITOS DEL IFEG</h1>
+  <div class="max-w-3xl mx-auto bg-white shadow p-6 rounded mt-8 bg-opacity-90">
+    <h1 class="text-2xl font-bold mb-4 text-gray-700">Simulador de Crédito</h1>
 
     <label class="block mb-2">Tipo de crédito:</label>
     <select id="tipoCredito" class="w-full p-2 border rounded mb-4">
@@ -39,7 +45,6 @@
 
     <div id="tablaAmortizacion" class="overflow-auto mb-4"></div>
 
-    <!-- Cuadro de texto informativo -->
     <div id="informacionCredito"></div>
   </div>
 </body>
