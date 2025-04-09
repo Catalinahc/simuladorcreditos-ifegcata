@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Crédito</title>
+  <script defer src="app.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow p-6 rounded">
+    <h1 class="text-2xl font-bold mb-4 text-gray-700">Simulador de Crédito</h1>
+
+    <label class="block mb-2">Tipo de crédito:</label>
+    <select id="tipoCredito" class="w-full p-2 border rounded mb-4">
+      <option value="educativo">Educativo</option>
+      <option value="agropecuario">Agropecuario</option>
+      <option value="microempresarial">Microempresarial</option>
+      <option value="asociativo">Asociativo</option>
+    </select>
+
+    <label class="block mb-2">Monto:</label>
+    <input type="number" id="monto" class="w-full p-2 border rounded mb-4" placeholder="Ingrese el monto" />
+
+    <label class="block mb-2">Plazo (en meses):</label>
+    <input type="number" id="plazo" class="w-full p-2 border rounded mb-2" value="1" />
+    <p id="errorPlazo" class="text-red-500 text-sm mb-2"></p>
+
+    <p class="mb-4">Tasa de interés mensual: <span id="tasaInteres">1.5%</span></p>
+
+    <div class="flex gap-4 mb-6">
+      <button id="calcular" class="bg-blue-600 text-white px-4 py-2 rounded">Calcular</button>
+      <button id="limpiar" class="bg-gray-400 text-white px-4 py-2 rounded">Limpiar</button>
+    </div>
+
+    <div id="honorarios" class="mb-4 font-semibold text-green-700"></div>
+
+    <div id="tablaAmortizacion" class="overflow-auto mb-4"></div>
+
+    <!-- Cuadro de texto informativo -->
+    <div id="informacionCredito"></div>
+  </div>
+</body>
+</html>
